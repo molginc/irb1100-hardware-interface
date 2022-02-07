@@ -1,5 +1,6 @@
 ARG FROM_IMAGE=osrf/ros:noetic-desktop
-ARG OVERLAY_WS=/home/carkin_ws
+ARG OVERLAY_WS=/home/catkin_ws
+ARG ROBOT_IP=<enter-robot-ip>
 
 FROM $FROM_IMAGE
 
@@ -13,19 +14,19 @@ RUN apt install ros-$ROS_DISTRO-catkin python3-catkin-tools python3-osrf-pycommo
 RUN apt install git -y
 RUN wstool init . ../pckgs.rosinstall 
 RUN wstool update -t . 
-RUN rosdep install --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
-RUN rm -rf /var/lib/apt/lists/* 
 
+# Setup catkin workspace
 WORKDIR $OVERLAY_WS
-RUN catkin config --extend /opt/ros/${ROS_DISTRO} --cmake-args -DCMAKE_BUILD_TYPE=Release && \
-    catkin build 
+RUN rosdep update
+RUN rosdep install --from-paths src --ignore-src --rosdistro $ROS_DISTRO -y
+RUN rm -rf /var/lib/apt/lists/*  
+RUN catkin config --extend /opt/ros/${ROS_DISTRO}
+RUN catkin build
+RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
+RUN echo "source ${OVERLAY_WS}/devel/setup.bash" >> ~/.bashrc
 
-# source entrypoint setup
-ENV OVERLAY_WS $OVERLAY_WS
+# default launch command
+CMD ["bash"]
 
-RUN sed --in-place --expression \
-      '$isource "$OVERLAY_WS/install/setup.bash"' \
-      /ros_entrypoint.sh
-
-# run launch file
-CMD [ "roslaunch", "abb_robot_bringup_examples", "ex2_rws_and_egm_6axis_robot.launch"]
+# could be replaced with something like the example launch file below when the driver is working:
+# CMD [ "roslaunch", "abb_robot_bringup_examples", "ex2_rws_and_egm_6axis_robot.launch"]
