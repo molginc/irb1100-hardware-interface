@@ -50,15 +50,10 @@ Docker should be installed on the system.
     git clone https://github.com/Amin173/irb1100-hardware-interface.git
     ```
 2. In the Dockerfile, update the ROBOT_IP argument.
-3. After cloning the repository, run one of these commands in the project directory:
+3. After cloning the repository, run the following command from the project directory:
     ```sh
     docker build . [--options: e.g. -t irb1100_driver:latest]
     ```
-   or:
-    ```sh
-    docker-compose -f docker-compose.yml up  [--options]
-    ```
-   The docker-compose build options can also be configured from the docker-compose.yaml file itself.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
