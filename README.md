@@ -66,10 +66,12 @@ After building the docker container, run the following command in the terminal:
    ```sh
    docker run -it  <container_name>:<container_tag>
    ```
-or, if built with docker-compose, you can run:
+Then, in the docker shell, the roslaunch files can be launched to control the robot. For, example:
    ```sh
-   docker-compose -it  <container_name>:<container_tag>
+   roslaunch abb_robot_bringup_examples ex2_rws_and_egm_6axis_robot.launch robot_ip:=<enter_robot_ip>
    ```
+   Note that the functionallity of the launch files are not tested yet! See the [Roadmap](roadmap) below. 
+   
 See the [docker run](https://docs.docker.com/engine/reference/run/) refernce for more options. 
 
 To stop the containers from running, run the following command:
@@ -81,8 +83,9 @@ To stop the containers from running, run the following command:
 
 <!-- ROADMAP -->
 ## Roadmap
+<div id="roadmap"></div>
 
-- [x] Replace incoompatible RWS service with manual robot descritption publisher to run EGM (see more details from [here](https://githubmemory.com/repo/ros-industrial/abb_robot_driver/issues/33?page=2)).
+- [x] Replace incompatible RWS service with manual robot descritption publisher to run EGM (see more details from [here](https://githubmemory.com/repo/ros-industrial/abb_robot_driver/issues/33?page=2)).
 - [x] Install the drivers
 - [] Test the driver with RobotStudio
 - [] Test the driver on the IRB1100 robot
