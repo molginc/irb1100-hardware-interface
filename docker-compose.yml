@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  irb1100_hardware_interface:
+    build: ./
+    ports:
+      - "8080:80"
