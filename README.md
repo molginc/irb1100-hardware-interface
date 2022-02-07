@@ -70,7 +70,7 @@ Then, in the docker shell, the roslaunch files can be launched to control the ro
    ```sh
    roslaunch abb_robot_bringup_examples ex2_rws_and_egm_6axis_robot.launch robot_ip:=<enter_robot_ip>
    ```
-   Note that the functionallity of the launch files are not tested yet! See the [Roadmap](roadmap) below. 
+   Note that the functionallity of the launch files are not tested yet! See the <a href="#roadmap">Roadmap</a> below. 
    
 See the [docker run](https://docs.docker.com/engine/reference/run/) refernce for more options. 
 
