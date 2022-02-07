@@ -52,13 +52,14 @@ Docker should be installed on the system.
     ```sh
     git clone https://github.com/Amin173/irb1100-hardware-interface.git
     ```
-2. After cloning the repository, run one of these commands in the project directory:
+2. In the Dockerfile, update the ROBOT_IP argument.
+3. After cloning the repository, run one of these commands in the project directory:
     ```sh
     docker build . [--options: e.g. -t irb1100_driver:latest]
     ```
    or:
     ```sh
-    docker-compose build [--options]
+    docker-compose -f docker-compose.yml up  [--options]
     ```
    The docker-compose build options can also be configured from the docker-compose.yaml file itself.
 
@@ -75,9 +76,14 @@ After building the docker container, run the following command in the terminal:
    ```
 or, if built with docker-compose, you can run:
    ```sh
-   docker run -it  <container_name>:<container_tag>
+   docker-compose -it  <container_name>:<container_tag>
    ```
-See the [docker run](https://docs.docker.com/engine/reference/run/) and [docker-compose](https://docs.docker.com/compose/reference/) refernces for more options. 
+See the [docker run](https://docs.docker.com/engine/reference/run/) refernce for more options. 
+
+To stop the containers from running, run the following command:
+   ```sh
+   docker stop [OPTIONS] CONTAINER
+   ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
