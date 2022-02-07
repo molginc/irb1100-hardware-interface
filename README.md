@@ -39,9 +39,6 @@ A ros-melodic docker file with the abb_hardware_interface driver installed for t
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 Docker should be installed on the system.
