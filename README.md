@@ -20,10 +20,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -85,7 +82,7 @@ To stop the containers from running, run the following command:
 ## Roadmap
 <div id="roadmap"></div>
 
-- [x] Replace incompatible RWS service with manual robot descritption publisher to run EGM (see more details from [here](https://githubmemory.com/repo/ros-industrial/abb_robot_driver/issues/33?page=2)).
+- [x] Replace incompatible RWS service with manual robot descritption publisher to run EGM (see more details from [here](https://github.com/ros-industrial/abb_robot_driver/issues/33).
 - [x] Install the drivers
 - [] Test the driver with RobotStudio
 - [] Test the driver on the IRB1100 robot
