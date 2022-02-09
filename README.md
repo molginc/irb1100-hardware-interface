@@ -82,7 +82,7 @@ To stop the containers from running, run the following command:
 ## Roadmap
 <div id="roadmap"></div>
 
-- [x] Replace incompatible RWS service with manual robot descritption publisher to run EGM (see more details from [here](https://github.com/ros-industrial/abb_robot_driver/issues/33).
+- [x] Replace incompatible RWS service with manual robot descritption publisher to run EGM (see more details from [here](https://github.com/ros-industrial/abb_robot_driver/issues/33)).
 - [x] Install the drivers
 - [] Test the driver with RobotStudio
 - [] Test the driver on the IRB1100 robot
