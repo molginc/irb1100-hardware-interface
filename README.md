@@ -63,9 +63,9 @@ After building the docker container, run the following command in the terminal:
    ```sh
    docker run -it  <container_name>:<container_tag>
    ```
-Then, in the docker shell, the roslaunch files can be launched to control the robot. For, example:
+Then, in the docker shell, launch the ros node below (the robot will move, be prepared to press the emergency stop if needed!):
    ```sh
-   roslaunch abb_robot_bringup_examples ex2_rws_and_egm_6axis_robot.launch robot_ip:=<enter_robot_ip>
+   rosrun abb_libegm_samples a1_joint_trajectory_node
    ```
    Note that the functionallity of the launch files are not tested yet! See the <a href="#roadmap">Roadmap</a> below. 
    
