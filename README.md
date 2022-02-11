@@ -20,10 +20,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -39,9 +36,6 @@ A ros-melodic docker file with the abb_hardware_interface driver installed for t
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 Docker should be installed on the system.
@@ -53,15 +47,10 @@ Docker should be installed on the system.
     git clone https://github.com/Amin173/irb1100-hardware-interface.git
     ```
 2. In the Dockerfile, update the ROBOT_IP argument.
-3. After cloning the repository, run one of these commands in the project directory:
+3. After cloning the repository, run the following command from the project directory:
     ```sh
     docker build . [--options: e.g. -t irb1100_driver:latest]
     ```
-   or:
-    ```sh
-    docker-compose -f docker-compose.yml up  [--options]
-    ```
-   The docker-compose build options can also be configured from the docker-compose.yaml file itself.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -74,10 +63,12 @@ After building the docker container, run the following command in the terminal:
    ```sh
    docker run -it  <container_name>:<container_tag>
    ```
-or, if built with docker-compose, you can run:
+Then, in the docker shell, the roslaunch files can be launched to control the robot. For, example:
    ```sh
-   docker-compose -it  <container_name>:<container_tag>
+   roslaunch abb_robot_bringup_examples ex2_rws_and_egm_6axis_robot.launch robot_ip:=<enter_robot_ip>
    ```
+   Note that the functionallity of the launch files are not tested yet! See the <a href="#roadmap">Roadmap</a> below. 
+   
 See the [docker run](https://docs.docker.com/engine/reference/run/) refernce for more options. 
 
 To stop the containers from running, run the following command:
@@ -89,8 +80,9 @@ To stop the containers from running, run the following command:
 
 <!-- ROADMAP -->
 ## Roadmap
+<div id="roadmap"></div>
 
-- [x] Replace incoompatible RWS service with manual robot descritption publisher to run EGM (see more details from [here](https://githubmemory.com/repo/ros-industrial/abb_robot_driver/issues/33?page=2)).
+- [x] Replace incompatible RWS service with manual robot descritption publisher to run EGM (see more details from [here](https://github.com/ros-industrial/abb_robot_driver/issues/33)).
 - [x] Install the drivers
 - [] Test the driver with RobotStudio
 - [] Test the driver on the IRB1100 robot
