@@ -85,8 +85,9 @@ To stop the containers from running, run the following command:
 
 - [x] Replace incompatible RWS service with manual robot descritption publisher to run EGM (see more details from [here](https://github.com/ros-industrial/abb_robot_driver/issues/33)).
 - [x] Install the drivers
-- [] Test the driver with RobotStudio
+- [x] Test the driver with RobotStudio
 - [] Test the driver on the IRB1100 robot
+- [] Integrate the hardware interface with MoveIt! to use the moveit commander for controlling the arm.
 - [] Transfer the packages to a ROS2 environment
 - [] Modify the [abb_rws](https://github.com/ros-industrial/abb_librws) driver to become compatible with the OmniController (this enables using the full capadbilities of the [abb_robot_driver](https://github.com/ros-industrial/abb_robot_driver) package)
 
