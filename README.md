@@ -61,9 +61,10 @@ Docker should be installed on the system.
 
 After building the docker container, run the following command in the terminal:
    ```sh
-   docker run -it  <container_name>:<container_tag>
+   docker run -it  -d -p <port_no>:<port_no?/udp <container_name>:<container_tag>
    ```
-Then, in the docker shell, launch the ros node below (the robot will move, be prepared to press the emergency stop if needed!):
+The port number is the port that you specify for the UdpUc device in RobotStudio. 
+Open two terminals of the running container. In one terminal launch ```sh roscore``` and, in the second container terminal, launch the ros node below (the robot will move, be prepared to press the emergency stop if needed!):
    ```sh
    rosrun abb_libegm_samples a1_joint_trajectory_node
    ```
