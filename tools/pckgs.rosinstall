@@ -18,3 +18,7 @@
     local-name: abb_robot_driver 
     uri: https://github.com/Amin173/abb_robot_driver.git
     version: master
+- git:
+    local-name: abb_libegm_samples
+    uri: https://github.com/Amin173/abb_libegm_samples.git
+    version: main
