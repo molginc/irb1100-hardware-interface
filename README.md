@@ -64,7 +64,7 @@ After building the docker container, run the following command in the terminal:
    docker run -it  -d -p <port_no>:<port_no?/udp <container_name>:<container_tag>
    ```
 The port number is the port that you specify for the UdpUc device in RobotStudio. 
-Open two terminals of the running container. In one terminal launch ``` roscore``` and, in the second container terminal, launch the ros node below (the robot will move, be prepared to press the emergency stop if needed!):
+Open two terminals of the running container. In one terminal launch ``` roscore``` and, in the second container terminal, launch the ros node below (if the robot RAPID program has been started, the robot will move; be prepared to press the emergency stop if needed!):
    ```sh
    rosrun abb_libegm_samples a1_joint_trajectory_node
    ```
