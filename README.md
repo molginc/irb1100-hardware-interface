@@ -89,7 +89,6 @@ To stop the containers from running, run the following command:
 - [] Test the driver on the IRB1100 robot
 - [] Integrate the hardware interface with MoveIt! to use the moveit commander for controlling the arm.
 - [] Transfer the packages to a ROS2 environment
-- [] Modify the [abb_rws](https://github.com/ros-industrial/abb_librws) driver and the [State Machine AddIn](https://robotapps.robotstudio.com/#/viewApp/c163de01-792e-4892-a290-37dbe050b6e1) to become compatible with the OmniController (this enables using the full capadbilities of the [abb_robot_driver](https://github.com/ros-industrial/abb_robot_driver) package)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
