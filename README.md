@@ -46,7 +46,7 @@ Docker should be installed on the system.
     ```sh
     git clone https://github.com/Amin173/irb1100-hardware-interface.git
     ```
-2. In the Dockerfile, update the ROBOT_IP argument.
+2. In the Dockerfile, update the ROBOT_IP and RBOBOT_PORT arguments.
 3. After cloning the repository, run the following command from the project directory:
     ```sh
     docker build . [--options: e.g. -t irb1100_driver:latest]
@@ -61,9 +61,9 @@ Docker should be installed on the system.
 
 After building the docker container, run the following command in the terminal:
    ```sh
-   docker run -it  -d -p <port_no>:<port_no?/udp <container_name>:<container_tag>
+   docker run -it  -d -p <port_no>:<port_no?/udp -p 80:80 <container_name>:<container_tag>
    ```
-The port number is the port that you specify for the UdpUc device in RobotStudio. 
+Replace <port_no> with the port that you specify for the UdpUc device in RobotStudio. 
 Open two terminals of the running container. In one terminal launch ``` roscore``` and, in the second container terminal, launch the ros node below (if the robot RAPID program has been started, the robot will move; be prepared to press the emergency stop if needed!):
    ```sh
    rosrun abb_libegm_samples a1_joint_trajectory_node
