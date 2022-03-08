@@ -64,14 +64,10 @@ After building the docker container, run the following command in the terminal:
    docker run -it  -d -p <port_no>:<port_no?/udp -p 80:80 <container_name>:<container_tag>
    ```
 Replace <port_no> with the port that you specify for the UdpUc device in RobotStudio. 
-Open two terminals of the running container. In one terminal launch ``` roscore``` and, in the second container terminal, launch the ros node below (if the robot RAPID program has been started, the robot will move; be prepared to press the emergency stop if needed!):
-   ```sh
-   rosrun abb_libegm_samples a1_joint_trajectory_node
-   ```
-   Note that the functionallity of the launch files are not tested yet! See the <a href="#roadmap">Roadmap</a> below. 
-   
 See the [docker run](https://docs.docker.com/engine/reference/run/) refernce for more options. 
 
+Follow the [abb_robot_bringup_examples](https://github.com/Amin173/abb_robot_driver/tree/add_omnicore_support/abb_robot_bringup_examples) instructions to launch the driver and communicate with the robot.
+   
 To stop the containers from running, run the following command:
    ```sh
    docker stop [OPTIONS] CONTAINER
@@ -83,13 +79,12 @@ To stop the containers from running, run the following command:
 ## Roadmap
 <div id="roadmap"></div>
 
-- [x] Replace incompatible RWS service with manual robot descritption publisher to run EGM (see more details from [here](https://github.com/ros-industrial/abb_robot_driver/issues/33)).
+- [x] Replace OmniCore Controller (RobotWare 7.0+) incompatible RWS services with RWS.
 - [x] Install the drivers
 - [x] Test the driver with RobotStudio
 - [] Test the driver on the IRB1100 robot
 - [] Integrate the hardware interface with MoveIt! to use the moveit commander for controlling the arm.
 - [] Transfer the packages to a ROS2 environment
-- [] Modify the [abb_rws](https://github.com/ros-industrial/abb_librws) driver and the [State Machine AddIn](https://robotapps.robotstudio.com/#/viewApp/c163de01-792e-4892-a290-37dbe050b6e1) to become compatible with the OmniController (this enables using the full capadbilities of the [abb_robot_driver](https://github.com/ros-industrial/abb_robot_driver) package)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
