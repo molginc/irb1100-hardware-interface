@@ -1,0 +1,8 @@
+- git:
+    local-name: abb_libegm
+    uri: https://github.com/ros-industrial/abb_libegm.git
+    version: e0b8c3b0
+- git:
+    local-name: abb_libegm_samples
+    uri: https://github.com/Amin173/abb_libegm_samples.git
+    version: main

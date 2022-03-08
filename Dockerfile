@@ -1,5 +1,7 @@
 # enter robot ip here:
-ARG ROBOT_IP="1.1.1.1"
+ARG ROBOT_IP="127.0.0.1"
+ARG ROBOT_PORT="85"
+
 
 ARG FROM_IMAGE=osrf/ros:noetic-desktop
 ARG OVERLAY_WS=/home/catkin_ws
@@ -7,16 +9,17 @@ ARG OVERLAY_WS=/home/catkin_ws
 FROM $FROM_IMAGE
 
 ARG ROBOT_IP
+ARG ROBOT_PORT
 
 # clone workspace source
 ARG OVERLAY_WS
 WORKDIR $OVERLAY_WS/src
-COPY ./tools/pckgs.rosinstall ../
+COPY ./tools/pckgs_with_rws.rosinstall ../
 RUN apt update 
 RUN rosdep update
 RUN apt install ros-$ROS_DISTRO-catkin python3-catkin-tools python3-osrf-pycommon -y
 RUN apt install git -y
-RUN wstool init . ../pckgs.rosinstall 
+RUN wstool init . ../pckgs_with_rws.rosinstall 
 RUN wstool update -t . 
 
 # Setup catkin workspace
