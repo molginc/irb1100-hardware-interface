@@ -68,7 +68,7 @@ Open two terminals of the running container. In one terminal launch ``` roscore`
    ```sh
    rosrun abb_libegm_samples a1_joint_trajectory_node
    ```
-   Note that the functionallity of the launch files are not tested yet! See the <a href="#roadmap">Roadmap</a> below. 
+   Note that the functionallity of the code samples are only tested on RobotStudio. See the <a href="#roadmap">Roadmap</a> below. 
    
 See the [docker run](https://docs.docker.com/engine/reference/run/) refernce for more options. 
 
