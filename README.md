@@ -28,7 +28,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A ros-melodic docker file with the abb_hardware_interface driver installed for the IRB1100 with the Omnicore controller.
+A ROS docker file with drivers installed for the ABB IRB1100 robot with the Omnicore controller.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
