@@ -28,7 +28,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A ros-melodic docker file with the abb_hardware_interface driver installed for the IRB1100 with the Omnicore controller.
+A ROS docker file containing the abb_libegm driver with sample codes.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -44,7 +44,7 @@ Docker should be installed on the system.
 
 1. Clone the repo
     ```sh
-    git clone https://github.com/Amin173/irb1100-hardware-interface.git
+    git clone https://github.com/Amin173/irb1100-hardware-interface.git -b egm_only
     ```
 2. In the Dockerfile, update the ROBOT_IP and RBOBOT_PORT arguments.
 3. After cloning the repository, run the following command from the project directory:
