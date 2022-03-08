@@ -70,8 +70,6 @@ Open two terminals of the running container. In one terminal launch ``` roscore`
    ```
    Note that the functionallity of the code samples are only tested on RobotStudio. See the <a href="#roadmap">Roadmap</a> below. 
    
-See the [docker run](https://docs.docker.com/engine/reference/run/) refernce for more options. 
-
 To stop the containers from running, run the following command:
    ```sh
    docker stop [OPTIONS] CONTAINER
