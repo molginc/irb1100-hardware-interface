@@ -61,11 +61,12 @@ Docker should be installed on the system.
 
 After building the docker container, run the following command in the terminal:
    ```sh
-   docker run -it  <container_name>:<container_tag>
+   docker run -it  -d -p <port_no>:<port_no?/udp <container_name>:<container_tag>
    ```
-Then, in the docker shell, the roslaunch files can be launched to control the robot. For, example:
+The port number is the port that you specify for the UdpUc device in RobotStudio. 
+Open two terminals of the running container. In one terminal launch ``` roscore``` and, in the second container terminal, launch the ros node below (if the robot RAPID program has been started, the robot will move; be prepared to press the emergency stop if needed!):
    ```sh
-   roslaunch abb_robot_bringup_examples ex2_rws_and_egm_6axis_robot.launch robot_ip:=<enter_robot_ip>
+   rosrun abb_libegm_samples a1_joint_trajectory_node
    ```
    Note that the functionallity of the launch files are not tested yet! See the <a href="#roadmap">Roadmap</a> below. 
    
@@ -84,10 +85,11 @@ To stop the containers from running, run the following command:
 
 - [x] Replace incompatible RWS service with manual robot descritption publisher to run EGM (see more details from [here](https://github.com/ros-industrial/abb_robot_driver/issues/33)).
 - [x] Install the drivers
-- [] Test the driver with RobotStudio
+- [x] Test the driver with RobotStudio
 - [] Test the driver on the IRB1100 robot
+- [] Integrate the hardware interface with MoveIt! to use the moveit commander for controlling the arm.
 - [] Transfer the packages to a ROS2 environment
-- [] Modify the [abb_rws](https://github.com/ros-industrial/abb_librws) driver to become compatible with the OmniController (this enables using the full capadbilities of the [abb_robot_driver](https://github.com/ros-industrial/abb_robot_driver) package)
+- [] Modify the [abb_rws](https://github.com/ros-industrial/abb_librws) driver and the [State Machine AddIn](https://robotapps.robotstudio.com/#/viewApp/c163de01-792e-4892-a290-37dbe050b6e1) to become compatible with the OmniController (this enables using the full capadbilities of the [abb_robot_driver](https://github.com/ros-industrial/abb_robot_driver) package)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
