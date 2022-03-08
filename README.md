@@ -28,7 +28,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A ROS docker file with drivers installed for the ABB IRB1100 robot with the Omnicore controller.
+A ROS docker file containing drivers for the ABB IRB1100 robot with the Omnicore controller.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
