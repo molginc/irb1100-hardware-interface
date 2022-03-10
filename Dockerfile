@@ -1,15 +1,7 @@
-# enter robot ip here:
-ARG ROBOT_IP="127.0.0.1"
-ARG ROBOT_PORT="85"
-
-
 ARG FROM_IMAGE=osrf/ros:noetic-desktop
 ARG OVERLAY_WS=/home/catkin_ws
 
 FROM $FROM_IMAGE
-
-ARG ROBOT_IP
-ARG ROBOT_PORT
 
 # clone workspace source
 ARG OVERLAY_WS
