@@ -1,15 +1,7 @@
-# enter robot ip here:
-ARG ROBOT_IP="127.0.0.1"
-ARG ROBOT_PORT="85"
-
-
 ARG FROM_IMAGE=osrf/ros:noetic-desktop
 ARG OVERLAY_WS=/home/catkin_ws
 
 FROM $FROM_IMAGE
-
-ARG ROBOT_IP
-ARG ROBOT_PORT
 
 # clone workspace source
 ARG OVERLAY_WS
@@ -34,6 +26,3 @@ RUN echo "source ${OVERLAY_WS}/devel/setup.bash" >> ~/.bashrc
 
 # default launch command
 CMD ["bash"]
-
-# could be replaced with something like the example launch file below when the driver is working:
-# CMD [ "roslaunch", "abb_robot_bringup_examples", "ex2_rws_and_egm_6axis_robot.launch", "robot_ip:=$ROBOT_IP"]
