@@ -26,6 +26,3 @@ RUN echo "source ${OVERLAY_WS}/devel/setup.bash" >> ~/.bashrc
 
 # default launch command
 CMD ["bash"]
-
-# could be replaced with something like the example launch file below when the driver is working:
-# CMD [ "roslaunch", "abb_robot_bringup_examples", "ex2_rws_and_egm_6axis_robot.launch", "robot_ip:=$ROBOT_IP"]
