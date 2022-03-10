@@ -61,19 +61,6 @@ Docker should be installed on the system.
 
 See the corresponding branches for specific usage instructions.
 
-
-<!-- ROADMAP -->
-## Roadmap
-<div id="roadmap"></div>
-
-- [x] Initial testing on RobotStudio with virtual controller (RobotWare 7.0 and higher).
-- [] Testing with ABB IRB1100 robot with OmniCore controller.
-- [] Integrate the hardware interface with MoveIt!
-- [] Transfer packages to a ROS2 environment
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- LICENSE -->
 ## License
 
