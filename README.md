@@ -61,9 +61,9 @@ Docker should be installed on the system.
 
 After building the docker container, run the following command in the terminal:
    ```sh
-   docker run -it  -d -p <port_no>:<port_no?/udp -p 80:80 <container_name>:<container_tag>
+   docker run -it  -d -p <port_no>:<port_no?/udp <container_name>:<container_tag>
    ```
-Replace <port_no> with the port that you specify for the UdpUc device in RobotStudio. 
+Replace <port_no> with the port that you specify for the UdpUc device in RobotStudio. The default port number is currently 6511.
 See the [docker run](https://docs.docker.com/engine/reference/run/) refernce for more options. 
 
 Follow the [abb_robot_bringup_examples](https://github.com/Amin173/abb_robot_driver/tree/add_omnicore_support/abb_robot_bringup_examples) instructions to launch the driver and communicate with the robot.
@@ -82,7 +82,7 @@ To stop the containers from running, run the following command:
 - [x] Replace OmniCore Controller (RobotWare 7.0+) incompatible RWS services with RWS.
 - [x] Install the drivers
 - [x] Test the driver with RobotStudio
-- [] Test the driver on the IRB1100 robot
+- [x] Test the driver on the IRB1100 robot
 - [] Integrate the hardware interface with MoveIt! to use the moveit commander for controlling the arm.
 - [] Transfer the packages to a ROS2 environment
 
