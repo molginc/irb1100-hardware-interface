@@ -47,8 +47,7 @@ Docker should be installed on the system.
     git clone https://github.com/Amin173/irb1100-hardware-interface.git -b <branch>
     ```
     The `<branch>` options are `egm_only` and `rws2_with_egm`.
-2. In the Dockerfile, update the ROBOT_IP and RBOBOT_PORT arguments.
-3. After cloning the repository, run the following command from the project directory:
+2. After cloning the repository, run the following command from the project directory:
     ```sh
     docker build . [--options: e.g. -t irb1100_driver:latest]
     ```
