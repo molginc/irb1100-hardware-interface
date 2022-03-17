@@ -13,4 +13,8 @@
 - git:
     local-name: abb_robot_driver
     uri: https://github.com/Amin173/abb_robot_driver.git
-    version: add_omnicore_support
+    version: moveit_integration
+- git:
+    local-name: path-planning-and-simulation
+    uri: https://github.com/Amin173/path-planning-and-simulation.git
+    version: 25c617e
