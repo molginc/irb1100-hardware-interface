@@ -1,0 +1,20 @@
+- git:
+    local-name: abb_libegm
+    uri: https://github.com/ros-industrial/abb_libegm.git
+    version: e0b8c3b0
+- git:
+    local-name: abb_librws
+    uri: https://github.com/Amin173/abb_librws.git
+    version: rws2_port_formated
+- git:
+    local-name: abb_egm_rws_managers
+    uri: https://github.com/Amin173/abb_egm_rws_managers.git
+    version: develop
+- git:
+    local-name: abb_robot_driver
+    uri: https://github.com/Amin173/abb_robot_driver.git
+    version: moveit_integration
+- git:
+    local-name: path-planning-and-simulation
+    uri: https://github.com/Amin173/path-planning-and-simulation.git
+    version: 25c617e
