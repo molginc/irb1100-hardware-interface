@@ -12,6 +12,7 @@ RUN rosdep update
 RUN apt install ros-$ROS_DISTRO-catkin python3-catkin-tools python3-osrf-pycommon -y
 RUN apt install git -y
 RUN wstool init . ../pckgs_with_rws.rosinstall 
+COPY  ./path-planning-and-simulation ./path-planning-and-simulation
 RUN wstool update -t . 
 
 # Setup catkin workspace
