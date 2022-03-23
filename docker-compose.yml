@@ -1,8 +1,36 @@
 version: '3.9'
 
 services:
-  irb1100_hardware_interface:
-    build: .
+  abb_driver:
+    image: abb_driver_only
     ports:
-      - "127.0.0.1:80:80"
-      - "127.0.0.1:6511:6511/udp"
+      - "192.168.0.103:6511:6511/udp"
+    environment:
+      - ROS_MASTER_URI=http://localhost:11311
+      - ROS_HOSTNAME=abb_driver
+    profiles:
+      - real-robot
+    command: >
+      bash -c "echo >> ~/.bashrc "export ROS_MASTER_URI=http://localhost:11311""
+      && "echo >> ~/.bashrc "export ROS_HOSTNAME=abb_driver""
+      && "roslaunch abb_robot_bringup_examples ex2_rws_and_egm_6axis_robot.launch robot_ip:=192.168.0.103 robot_port:=85"
+    entrypoint: [/bin/sh, -c, bash]
+    tty: true
+
+  path-planning:
+    image: path_planning
+    environment:
+      - ROS_MASTER_URI=http://abb_driver:11311
+      - ROS_HOSTNAME=path-planning
+      - DISPLAY="192.168.0.103:0"
+    profiles:
+      - real-robot
+    command: >
+      bash -c "echo >> ~/.bashrc "export ROS_MASTER_URI=http://localhost:11311""
+      && "echo >> ~/.bashrc "export ROS_HOSTNAME=abb_driver""
+      && "roslaunch crb1100_580_moveit_config moveit_planning_execution.launch sim:=false"
+    entrypoint: [/bin/sh, -c, bash]
+    tty: true
+    
+
+    
